@@ -7,7 +7,7 @@ export function FloatingCTA() {
 
   const handleWhatsApp = () => {
     // Replace with your WhatsApp number (include country code)
-    const phoneNumber = '966501234567'; // Example: Saudi Arabia number
+    const phoneNumber = '966560394576'; // Example: Saudi Arabia number
     const message = 'Hello! I would like to connect with you.';
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
