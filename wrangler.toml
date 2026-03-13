@@ -1,0 +1,30 @@
+name = "mustudiolab"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+main = "src/index.ts"
+build = { command = "npm run build", cwd = ".", watch_paths = ["src/**/*.ts", "src/**/*.tsx"] }
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["src/**/*.ts", "src/**/*.tsx"]
+
+[build.upload]
+format = "service-worker"
+
+[[build.upload.rules]]
+type = "CompiledContentType"
+globs = ["**/*.wasm"]
+fallthrough = true
+
+[[build.upload.rules]]
+type = "Text"
+globs = ["**/*.txt", "**/*.html"]
+fallthrough = true
+
+[[build.upload.rules]]
+type = "Bytes"
+globs = ["**/*"]
