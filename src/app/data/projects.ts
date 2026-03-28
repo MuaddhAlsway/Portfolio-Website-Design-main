@@ -79,8 +79,8 @@ export function getProjectById(id: number): Project | undefined {
 }
 
 export const categories = [
-  { id: 'all', name: 'All Projects', count: 41 },
-  { id: 'fullstack', name: 'Full Stack', count: 13 },
+  { id: 'all', name: 'All Projects', count: 42 },
+  { id: 'fullstack', name: 'Full Stack', count: 14 },
   { id: 'htmlcssjs', name: 'HTML/CSS/JS', count: 18 },
   { id: 'htmlcss', name: 'HTML/CSS', count: 5 },
   { id: 'c', name: 'C Programming', count: 5 }
