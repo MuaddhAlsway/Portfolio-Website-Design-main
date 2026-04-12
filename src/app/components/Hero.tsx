@@ -117,17 +117,19 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
+            className="flex justify-center"
           >
-            {[
-              { number: '40+', label: 'Projects' },
-              { number: '8+', label: 'Tech Stacks' }
-            ].map((stat, index) => (
-              <div key={index} className="backdrop-blur-md bg-white/5 rounded-xl p-4 border border-white/10 flex flex-col items-center justify-center text-center">
-                <div className="text-3xl font-bold text-[#e8ab61]">{stat.number}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
-              </div>
-            ))}
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                { number: '40+', label: 'Projects' },
+                { number: '8+', label: 'Tech Stacks' }
+              ].map((stat, index) => (
+                <div key={index} className="backdrop-blur-md bg-white/5 rounded-xl p-4 border border-white/10 flex flex-col items-center justify-center text-center">
+                  <div className="text-3xl font-bold text-[#e8ab61]">{stat.number}</div>
+                  <div className="text-sm text-gray-400">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
 
