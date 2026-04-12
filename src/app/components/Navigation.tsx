@@ -63,7 +63,7 @@ export function Navigation({ theme, toggleTheme }: NavigationProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              MUSTUDIOLAB
+              MU.STUDIO.LAB
             </motion.button>
 
             {/* Desktop Navigation */}
