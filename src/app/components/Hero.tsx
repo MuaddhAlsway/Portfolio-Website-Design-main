@@ -74,7 +74,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight"
           >
-            MUSTUDIOLAB
+            MU.STUDIO.LAB
           </motion.h1>
 
           {/* Typing Animation */}
@@ -109,14 +109,7 @@ export function Hero() {
             >
               Get In Touch
             </button>
-            <a
-              href="/Muaddh AL-Sway Web Developer.pdf"
-              download="Muaddh AL-Sway Web Developer.pdf"
-              className="px-8 py-3 border-2 border-[#e8ab61] text-[#e8ab61] rounded-full font-semibold hover:bg-[#e8ab61] hover:text-[#0f0f0f] transition-all duration-300 hover:scale-105 flex items-center gap-2"
-            >
-              <Download className="w-5 h-5" />
-              Download CV
-            </a>
+          
           </motion.div>
 
           {/* Quick Stats */}
@@ -128,9 +121,7 @@ export function Hero() {
           >
             {[
               { number: '40+', label: 'Projects' },
-              { number: '4', label: 'Certifications' },
-              { number: '2+', label: 'Years Learning' },
-              { number: '4', label: 'Tech Stacks' }
+              { number: '8+', label: 'Tech Stacks' }
             ].map((stat, index) => (
               <div key={index} className="backdrop-blur-md bg-white/5 rounded-xl p-4 border border-white/10">
                 <div className="text-3xl font-bold text-[#e8ab61]">{stat.number}</div>

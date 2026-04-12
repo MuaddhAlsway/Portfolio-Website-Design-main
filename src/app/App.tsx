@@ -3,11 +3,8 @@ import { Routes, Route } from 'react-router';
 import { Navigation } from '@/app/components/Navigation';
 import { Hero } from '@/app/components/Hero';
 import { Experience } from '@/app/components/Experience';
-import { Education } from '@/app/components/Education';
 import { Portfolio } from '@/app/components/Portfolio';
 import { Skills } from '@/app/components/Skills';
-import { Courses } from '@/app/components/Courses';
-
 import { Footer } from '@/app/components/Footer';
 import { FloatingCTA } from '@/app/components/FloatingCTA';
 import { FeaturedClients } from '@/app/components/FeaturedClients';
@@ -40,8 +37,8 @@ export default function App() {
             <Experience />
             <Portfolio />
             <Skills />
-            <Education />
-            <Courses />
+           
+            
            
             <Footer />
             <FloatingCTA />

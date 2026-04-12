@@ -130,7 +130,7 @@ export function Portfolio() {
                 <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, i) => (
+                  {project.tech.slice(0, 3).map((tech, i) => (
                     <span
                       key={i}
                       className="px-3 py-1 bg-[#e8ab61]/10 text-[#e8ab61] rounded-full text-xs font-medium"
@@ -138,6 +138,11 @@ export function Portfolio() {
                       {tech}
                     </span>
                   ))}
+                  {project.tech.length > 3 && (
+                    <span className="px-3 py-1 bg-[#e8ab61]/10 text-[#e8ab61] rounded-full text-xs font-medium cursor-pointer hover:bg-[#e8ab61]/20 transition-colors">
+                      +{project.tech.length - 3}
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.div>
