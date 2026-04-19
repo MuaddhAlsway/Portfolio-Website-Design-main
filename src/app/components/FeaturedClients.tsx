@@ -122,22 +122,11 @@ export function FeaturedClients() {
                   </div>
 
                   {/* Content Container */}
-                  <div className="p-6">
+                  <div className="p-6 flex flex-col h-full">
                     <h3 className="text-xl font-bold text-white group-hover:text-[#e8ab61] transition-colors mb-2">
                       {project.name}
                     </h3>
-                    <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tech.map((tech, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1 bg-[#e8ab61]/10 text-[#e8ab61] rounded-full text-xs font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                    <p className="text-gray-400 mb-4 text-sm flex-grow">{project.description}</p>
 
                     {/* Brand Section */}
                     <div className="flex items-center gap-2 mb-6 text-gray-400 text-sm">
@@ -151,16 +140,6 @@ export function FeaturedClients() {
 
                     {/* Links - Fixed Height Container */}
                     <div className="flex gap-2 h-10">
-                      {project.github && (
-                        <a
-                          href={project.github}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex-1 px-3 py-2 bg-[#e8ab61]/10 text-[#e8ab61] rounded-lg text-sm font-medium hover:bg-[#e8ab61]/20 transition-colors text-center flex items-center justify-center"
-                        >
-                          GitHub
-                        </a>
-                      )}
                       {project.live && (
                         <a
                           href={project.live}
@@ -171,7 +150,7 @@ export function FeaturedClients() {
                           Live
                         </a>
                       )}
-                      {!project.github && !project.live && (
+                      {!project.live && (
                         <div className="flex-1"></div>
                       )}
                     </div>
