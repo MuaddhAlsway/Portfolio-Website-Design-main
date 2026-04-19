@@ -110,10 +110,10 @@ export function FeaturedClients() {
               >
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="group backdrop-blur-md bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-[#e8ab61]/50 transition-all duration-300 h-full"
+                  className="group backdrop-blur-md bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-[#e8ab61]/50 transition-all duration-300 flex flex-col h-full"
                 >
                   {/* Image Container */}
-                  <div className="relative w-full h-48 bg-gray-900 overflow-hidden">
+                  <div className="relative w-full h-48 bg-gray-900 overflow-hidden flex-shrink-0">
                     <ImageWithFallback
                       src={project.image}
                       alt={project.name}
@@ -122,15 +122,15 @@ export function FeaturedClients() {
                   </div>
 
                   {/* Content Container */}
-                  <div className="p-6 flex flex-col h-full">
+                  <div className="p-6 flex flex-col flex-grow">
                     <h3 className="text-xl font-bold text-white group-hover:text-[#e8ab61] transition-colors mb-2">
                       {project.name}
                     </h3>
                     <p className="text-gray-400 mb-4 text-sm flex-grow">{project.description}</p>
 
                     {/* Brand Section */}
-                    <div className="flex items-center gap-2 mb-6 text-gray-400 text-sm">
-                      <div className="w-5 h-5 bg-[#e8ab61] rounded-full flex items-center justify-center font-bold text-[#0f0f0f] text-xs">
+                    <div className="flex items-center gap-2 mb-4 text-gray-400 text-sm">
+                      <div className="w-5 h-5 bg-[#e8ab61] rounded-full flex items-center justify-center font-bold text-[#0f0f0f] text-xs flex-shrink-0">
                         <Building2 className="w-3 h-3" />
                       </div>
                       <span>
@@ -139,10 +139,10 @@ export function FeaturedClients() {
                     </div>
 
                     {/* Links - Fixed Height Container */}
-                    <div className="flex gap-2 h-10">
+                    <div className="flex gap-2">
                       {project.live && (
                         <a
-                          href={project.live}
+                          href={project.live.trim()}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 px-3 py-2 bg-[#e8ab61]/10 text-[#e8ab61] rounded-lg text-sm font-medium hover:bg-[#e8ab61]/20 transition-colors text-center flex items-center justify-center"
