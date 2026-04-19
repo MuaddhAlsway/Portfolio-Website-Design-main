@@ -42,6 +42,7 @@ const clientProjects: ClientProject[] = [
     tech: ['React', 'Express.js', 'Turso', 'Resend'],
     image: '/Projects/WRITING.png',
     github: 'https://github.com/MuaddhAlsway/Writer-Website-Landing-Page.git',
+    live: ' https://authorfsk.com/',
     brand: 'MIBDAAT AL-THELATH for advertising'
   },
   {
@@ -61,7 +62,7 @@ const clientProjects: ClientProject[] = [
     tech: ['PHP', 'MySQL', 'JavaScript', 'HTML5', 'CSS3'],
     image: '/Projects/LAKUM.png',
     github: 'https://github.com/MuaddhAlsway/LAKUMPremiumVersion.git',
-    live: 'https://lakumartspace.infinityfree.me/',
+    live: ' https://lakumartspace.com/',
     brand: 'MIBDAAT AL-THELATH for advertising'
   }
 ];
