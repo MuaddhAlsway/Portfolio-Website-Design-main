@@ -119,9 +119,10 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 1 }}
             className="flex justify-center"
           >
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {[
-                { number: '40+', label: 'Projects' },
+                { number: '44+', label: 'Projects' },
+                { number: '16+', label: 'Full Stack' },
                 { number: '8+', label: 'Tech Stacks' }
               ].map((stat, index) => (
                 <div key={index} className="backdrop-blur-md bg-white/5 rounded-xl p-4 border border-white/10 flex flex-col items-center justify-center text-center">
