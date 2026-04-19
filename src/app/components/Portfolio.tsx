@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { motion } from 'motion/react';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, FileText, BookOpen, GitBranch } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { projects, categories } from '@/app/data/projects';
 
@@ -134,7 +134,7 @@ export function Portfolio() {
                         onClick={(e) => e.stopPropagation()}
                       >
                         <svg className="w-4 h-4 text-[#e8ab61]" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M4.459 4.208c.746.606 1.026.56 2.428.56h13.24c.886 0 1.314-.028 1.733-.135.578-.16 1.074-.57 1.278-1.16.082-.243.082-.714.082-2.956V1.115c0-.anglo.028-.666-.082-.928-.204-.59-.7-1-1.278-1.16-.419-.107-.847-.135-1.733-.135H6.887c-1.402 0-1.682-.046-2.428.56-.746.606-.996 1.035-.996 2.41v.266c0 .3-.043.843 0 1.175.087.572.571 1.11 1.202 1.222.055.01.11.015.166.015.3 0 .584-.087.84-.26.504-.35.756-.935.756-1.619 0-.601-.255-1.075-.756-1.425-.3-.21-.6-.28-.84-.28H4.459zm15.113 2.852c.464 0 .823.350.823.784 0 .433-.36.783-.823.783-.464 0-.823-.35-.823-.783 0-.434.36-.784.823-.784zm-4.117 0c.464 0 .823.350.823.784 0 .433-.36.783-.823.783-.464 0-.823-.35-.823-.783 0-.434.36-.784.823-.784zm-4.117 0c.464 0 .823.350.823.784 0 .433-.36.783-.823.783-.464 0-.823-.35-.823-.783 0-.434.36-.784.823-.784zm-4.117 0c.464 0 .823.350.823.784 0 .433-.36.783-.823.783-.464 0-.823-.35-.823-.783 0-.434.36-.784.823-.784z" />
+                          <path d="M4 3h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1zm1 2v14h14V5H5zm2 2h10v2H7V7zm0 4h10v2H7v-2zm0 4h6v2H7v-2z" />
                         </svg>
                       </a>
                     )}
@@ -147,9 +147,7 @@ export function Portfolio() {
                         title="Wiki Documentation"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <svg className="w-4 h-4 text-[#e8ab61]" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
-                        </svg>
+                        <FileText className="w-4 h-4 text-[#e8ab61]" />
                       </a>
                     )}
                     {project.diagram && (
@@ -162,7 +160,7 @@ export function Portfolio() {
                         onClick={(e) => e.stopPropagation()}
                       >
                         <svg className="w-4 h-4 text-[#e8ab61]" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                          <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z" />
                         </svg>
                       </a>
                     )}
