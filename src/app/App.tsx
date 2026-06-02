@@ -36,8 +36,9 @@ export default function App() {
           <>
             <Hero />
             <FeaturedClients />
-            <Experience />
             <CaseStudies />
+            <Experience />
+            
             <Portfolio />
             <Skills />
            
