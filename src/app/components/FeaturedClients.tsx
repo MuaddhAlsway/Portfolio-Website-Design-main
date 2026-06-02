@@ -22,7 +22,7 @@ const clientProjects: ClientProject[] = [
     tech: ['Next.js', 'React', 'Tailwind', 'CMS'],
     image: '/Projects/TRQ.png',
     github: 'https://github.com/MuaddhAlsway/TRQ-Archicator-Studio.git',
-    live: 'https://production.trq-studio.pages.dev/',
+    live: 'https://trqstudio.com/',
     brand: 'MUSTUDIOLAB'
   },
   {
