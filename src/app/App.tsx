@@ -9,6 +9,7 @@ import { Footer } from '@/app/components/Footer';
 import { FloatingCTA } from '@/app/components/FloatingCTA';
 import { FeaturedClients } from '@/app/components/FeaturedClients';
 import { ProjectDetail } from '@/app/components/ProjectDetail';
+import { CaseStudies } from '@/app/components/CaseStudies';
 
 export default function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
@@ -35,6 +36,7 @@ export default function App() {
             <Hero />
             <FeaturedClients />
             <Experience />
+            <CaseStudies />
             <Portfolio />
             <Skills />
            
