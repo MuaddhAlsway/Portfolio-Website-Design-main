@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Heart, Linkedin, Github, Mail, ArrowUp } from 'lucide-react';
+import { Heart, Linkedin, Github, ArrowUp } from 'lucide-react';
 
 export function Footer() {
   const scrollToTop = () => {
@@ -30,7 +30,7 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/muaddh-alsway/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white/5 hover:bg-[#e8ab61]/20 rounded-lg border border-white/10 transition-all duration-300 hover:scale-110"
@@ -38,18 +38,12 @@ export function Footer() {
                 <Linkedin className="w-5 h-5 text-[#e8ab61]" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/MuaddhAlsway"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white/5 hover:bg-[#e8ab61]/20 rounded-lg border border-white/10 transition-all duration-300 hover:scale-110"
               >
                 <Github className="w-5 h-5 text-[#e8ab61]" />
-              </a>
-              <a
-                href="mailto:contact@mustudiolab.com"
-                className="p-3 bg-white/5 hover:bg-[#e8ab61]/20 rounded-lg border border-white/10 transition-all duration-300 hover:scale-110"
-              >
-                <Mail className="w-5 h-5 text-[#e8ab61]" />
               </a>
             </div>
           </div>
