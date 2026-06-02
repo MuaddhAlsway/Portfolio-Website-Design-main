@@ -16,6 +16,16 @@ interface CaseStudyCard {
 
 const caseStudies: CaseStudyCard[] = [
   {
+    id: 'trq-studio',
+    title: 'TRQ Studio',
+    subtitle: 'Bilingual Portfolio & Content Management Platform',
+    description: 'Modern full-stack platform with bilingual support (English & Arabic), powerful admin dashboard, secure authentication, rich content management, and enterprise-grade security.',
+    image: '/Projects/TRQ.png',
+    category: 'Full-Stack',
+    duration: '6 months',
+    techStack: ['React', 'TypeScript', 'Vite', 'Express.js', 'SQLite'],
+  },
+  {
     id: 'td-logistics',
     title: 'TD Logistics',
     subtitle: 'Building a Secure Digital Logistics Platform',

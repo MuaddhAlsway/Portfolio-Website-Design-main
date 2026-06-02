@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2, ExternalLink, Clock, Briefcase } from 'lucide-react';
 import { tdLogisticsCaseStudy } from '@/app/data/caseStudies';
+import { trqStudioCaseStudy } from '@/app/data/trqStudioCaseStudy';
 import { Navigation } from './Navigation';
 import { Footer } from './Footer';
 
@@ -17,6 +18,8 @@ export function CaseStudyDetail() {
   let caseStudy = null;
   if (id === 'td-logistics') {
     caseStudy = tdLogisticsCaseStudy;
+  } else if (id === 'trq-studio') {
+    caseStudy = trqStudioCaseStudy;
   }
 
   if (!caseStudy) {
@@ -101,7 +104,7 @@ export function CaseStudyDetail() {
 
               <div className="flex gap-3">
                 <a
-                  href="https://tdlogistics.co/"
+                  href={id === 'trq-studio' ? 'https://trqstudio.com/' : 'https://tdlogistics.co/'}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-[#e8ab61] hover:bg-[#d79e50] text-[#0f0f0f] rounded-lg transition-all font-medium inline-flex items-center gap-2"
