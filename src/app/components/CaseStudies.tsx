@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
+import { useNavigate } from 'react-router';
 import { ArrowRight, Briefcase } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
-import { CaseStudyModal } from './CaseStudyModal';
-import { tdLogisticsCaseStudy } from '@/app/data/caseStudies';
 
 interface CaseStudyCard {
   id: string;
@@ -30,7 +28,7 @@ const caseStudies: CaseStudyCard[] = [
 ];
 
 export function CaseStudies() {
-  const [selectedCaseStudy, setSelectedCaseStudy] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -65,7 +63,6 @@ export function CaseStudies() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                onClick={() => setSelectedCaseStudy(caseStudy.id)}
                 className="group cursor-pointer"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -128,7 +125,7 @@ export function CaseStudies() {
                     <motion.button
                       whileHover={{ x: 10 }}
                       whileTap={{ scale: 0.95 }}
-                      onClick={() => setSelectedCaseStudy(caseStudy.id)}
+                      onClick={() => navigate(`/case-study/${caseStudy.id}`)}
                       className="inline-flex items-center gap-3 px-6 py-3 bg-[#e8ab61] text-[#0f0f0f] rounded-full font-semibold hover:bg-[#f0b86f] transition-colors"
                     >
                       Read Full Case Study
@@ -146,15 +143,6 @@ export function CaseStudies() {
           </div>
         </div>
       </section>
-
-      {/* Case Study Modal */}
-      {selectedCaseStudy === 'td-logistics' && (
-        <CaseStudyModal
-          isOpen={!!selectedCaseStudy}
-          onClose={() => setSelectedCaseStudy(null)}
-          caseStudy={tdLogisticsCaseStudy}
-        />
-      )}
     </>
   );
 }
