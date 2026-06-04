@@ -1,47 +1,47 @@
 import { motion } from 'motion/react';
-import { MessageCircle, ArrowRight, Check } from 'lucide-react';
+import { MessageCircle, ArrowRight, Check, Globe, Zap, Code, Smartphone, Lock, Headphones, Briefcase, TrendingUp, Search } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const projectTypes = [
   {
     title: 'Business Websites',
     description: 'Professional sites that convert visitors into customers',
-    icon: '🌐',
+    icon: Globe,
   },
   {
     title: 'Web Applications',
     description: 'Interactive platforms with real-time functionality',
-    icon: '⚙️',
+    icon: Code,
   },
   {
     title: 'E-Commerce',
     description: 'Online stores with payments and inventory management',
-    icon: '🛒',
+    icon: TrendingUp,
   },
   {
     title: 'Logistics Platforms',
     description: 'Tracking systems and supply chain solutions',
-    icon: '📦',
+    icon: Briefcase,
   },
   {
     title: 'Dashboards',
     description: 'Data visualization and admin management tools',
-    icon: '📊',
+    icon: TrendingUp,
   },
   {
     title: 'Portfolio Websites',
     description: 'Showcase your work and expertise online',
-    icon: '🎨',
+    icon: Briefcase,
   },
   {
     title: 'Landing Pages',
     description: 'High-converting pages optimized for campaigns',
-    icon: '🚀',
+    icon: Zap,
   },
   {
     title: 'Custom Solutions',
     description: 'Tailored projects built to your specifications',
-    icon: '✨',
+    icon: Code,
   },
 ];
 
@@ -49,32 +49,32 @@ const whyChooseUs = [
   {
     title: 'Modern Design',
     description: 'Contemporary aesthetics with attention to detail',
-    icon: '🎯',
+    icon: Smartphone,
   },
   {
     title: 'Fast Development',
     description: 'Quick turnaround without compromising quality',
-    icon: '⚡',
+    icon: Zap,
   },
   {
     title: 'SEO Optimized',
     description: 'Built for search engines and visibility',
-    icon: '🔍',
+    icon: Search,
   },
   {
     title: 'Mobile Responsive',
     description: 'Perfect experience on all devices',
-    icon: '📱',
+    icon: Smartphone,
   },
   {
     title: 'Secure Solutions',
     description: 'Enterprise-grade security standards',
-    icon: '🔒',
+    icon: Lock,
   },
   {
     title: 'Ongoing Support',
     description: 'Maintenance and updates after launch',
-    icon: '🤝',
+    icon: Headphones,
   },
 ];
 
@@ -140,10 +140,13 @@ const openWhatsApp = () => {
 export function StartProject() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [heroVisible, setHeroVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 300);
+      // Check if user has scrolled past hero section (approximately 600px)
+      setIsScrolled(window.scrollY > 600);
+      setHeroVisible(window.scrollY < 300);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -152,8 +155,8 @@ export function StartProject() {
 
   return (
     <div className="min-h-screen bg-[#0f0f0f] text-white overflow-x-hidden">
-      {/* Sticky WhatsApp Button */}
-      {isScrolled && (
+      {/* Sticky WhatsApp Button - Only show when scrolled past hero */}
+      {isScrolled && !heroVisible && (
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -216,22 +219,27 @@ export function StartProject() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {projectTypes.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-6 hover:border-[#e8ab61]/50 transition-all group cursor-pointer"
-              >
-                <div className="text-4xl mb-4">{project.icon}</div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-[#e8ab61] transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 text-sm">{project.description}</p>
-              </motion.div>
-            ))}
+            {projectTypes.map((project, index) => {
+              const IconComponent = project.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-6 hover:border-[#e8ab61]/50 transition-all group cursor-pointer"
+                >
+                  <div className="text-4xl mb-4 text-[#e8ab61]">
+                    <IconComponent className="w-10 h-10" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-[#e8ab61] transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm">{project.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -254,20 +262,25 @@ export function StartProject() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChooseUs.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-8 hover:border-[#e8ab61]/50 transition-all"
-              >
-                <div className="text-5xl mb-6">{item.icon}</div>
-                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                <p className="text-gray-400">{item.description}</p>
-              </motion.div>
-            ))}
+            {whyChooseUs.map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-2xl p-8 hover:border-[#e8ab61]/50 transition-all"
+                >
+                  <div className="text-5xl mb-6 text-[#e8ab61]">
+                    <IconComponent className="w-12 h-12" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-gray-400">{item.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
