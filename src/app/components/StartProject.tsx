@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { MessageCircle, ArrowRight, Check, Globe, Zap, Code, Smartphone, Lock, Headphones, Briefcase, TrendingUp, Search, Home } from 'lucide-react';
+import { MessageCircle, ArrowRight, Check, Globe, Zap, Code, Smartphone, Lock, Headphones, Briefcase, TrendingUp, Search, Home, ArrowUp } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
@@ -151,7 +151,12 @@ export function StartProject() {
   const [heroVisible, setHeroVisible] = useState(true);
   const [showStickyCTA, setShowStickyCTA] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
   const navigate = useNavigate();
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -160,12 +165,19 @@ export function StartProject() {
   };
 
   useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       // Show sticky button after scrolling past hero (300px) but before final CTA (approximately 1400px)
       const showButton = window.scrollY > 300 && window.scrollY < 1400;
       setShowStickyCTA(showButton);
       setIsScrolled(window.scrollY > 600);
       setHeroVisible(window.scrollY < 300);
+      // Show scroll to top button when scrolled down more than 500px
+      setShowScrollToTop(window.scrollY > 500);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -254,6 +266,20 @@ export function StartProject() {
           className="fixed bottom-8 right-8 z-40 w-16 h-16 bg-[#25D366] hover:bg-[#20ba5a] rounded-full flex items-center justify-center shadow-2xl transition-all"
         >
           <MessageCircle className="w-8 h-8 text-white" />
+        </motion.button>
+      )}
+
+      {/* Scroll to Top Button */}
+      {showScrollToTop && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          whileHover={{ scale: 1.1 }}
+          onClick={scrollToTop}
+          className="fixed bottom-8 left-8 z-40 w-16 h-16 bg-[#e8ab61] hover:bg-[#d79e50] rounded-full flex items-center justify-center shadow-2xl transition-all"
+        >
+          <ArrowUp className="w-8 h-8 text-[#0f0f0f]" />
         </motion.button>
       )}
 
