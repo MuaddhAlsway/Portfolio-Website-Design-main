@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
+import { useNavigate } from 'react-router';
 
 interface NavigationProps {
 }
@@ -15,6 +16,7 @@ export function Navigation({}: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,6 +78,14 @@ export function Navigation({}: NavigationProps) {
                   {link.name}
                 </button>
               ))}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => navigate('/start-project')}
+                className="px-6 py-2 bg-[#e8ab61] hover:bg-[#d79e50] text-[#0f0f0f] rounded-full font-semibold transition-all"
+              >
+                Start Project
+              </motion.button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -107,6 +117,17 @@ export function Navigation({}: NavigationProps) {
                     {link.name}
                   </button>
                 ))}
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => {
+                    navigate('/start-project');
+                    setIsOpen(false);
+                  }}
+                  className="w-full px-6 py-2 bg-[#e8ab61] hover:bg-[#d79e50] text-[#0f0f0f] rounded-full font-semibold transition-all mt-4"
+                >
+                  Start Project
+                </motion.button>
               </div>
             </motion.div>
           )}

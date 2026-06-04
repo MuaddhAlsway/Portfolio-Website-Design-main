@@ -347,7 +347,7 @@ export function CaseStudyDetail() {
               Let's work together to build a secure, scalable platform that transforms your business.
             </p>
             <button
-              onClick={() => navigate('/#contact')}
+              onClick={() => navigate('/start-project')}
               className="bg-[#e8ab61] hover:bg-[#d79e50] text-[#0f0f0f] px-8 py-4 rounded-full text-lg font-semibold transition-all hover:scale-105 inline-flex items-center gap-2"
             >
               Start Your Project

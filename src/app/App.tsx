@@ -10,6 +10,7 @@ import { FeaturedClients } from '@/app/components/FeaturedClients';
 import { ProjectDetail } from '@/app/components/ProjectDetail';
 import { CaseStudies } from '@/app/components/CaseStudies';
 import { CaseStudyDetail } from '@/app/components/CaseStudyDetail';
+import { StartProject } from '@/app/components/StartProject';
 
 export default function App() {
   return (
@@ -34,6 +35,12 @@ export default function App() {
         } />
         <Route path="/project/:id" element={<ProjectDetail />} />
         <Route path="/case-study/:id" element={<CaseStudyDetail />} />
+        <Route path="/start-project" element={
+          <>
+            <StartProject />
+            <Footer />
+          </>
+        } />
       </Routes>
     </div>
   );
