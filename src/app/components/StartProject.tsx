@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
-import { MessageCircle, ArrowRight, Check, Globe, Zap, Code, Smartphone, Lock, Headphones, Briefcase, TrendingUp, Search } from 'lucide-react';
+import { MessageCircle, ArrowRight, Check, Globe, Zap, Code, Smartphone, Lock, Headphones, Briefcase, TrendingUp, Search, Home } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router';
 
 const projectTypes = [
   {
@@ -142,6 +143,7 @@ export function StartProject() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [heroVisible, setHeroVisible] = useState(true);
   const [showStickyCTA, setShowStickyCTA] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -177,6 +179,16 @@ export function StartProject() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#e8ab61]/5 to-transparent pointer-events-none" />
         
         <div className="container mx-auto max-w-5xl relative z-10">
+          <motion.button
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            onClick={() => navigate('/')}
+            className="flex items-center gap-2 text-gray-400 hover:text-[#e8ab61] transition-colors mb-8"
+          >
+            <ArrowRight className="w-5 h-5 rotate-180" />
+            Back to Home
+          </motion.button>
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
