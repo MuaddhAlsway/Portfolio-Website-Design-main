@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2, ExternalLink, Clock, Briefcase } from 'lucide-react';
 import { tdLogisticsCaseStudy } from '@/app/data/caseStudies';
 import { trqStudioCaseStudy } from '@/app/data/trqStudioCaseStudy';
+import { mesahaLakumCaseStudy } from '@/app/data/mesahaLakumCaseStudy';
 import { Navigation } from './Navigation';
 import { Footer } from './Footer';
 
@@ -20,6 +21,8 @@ export function CaseStudyDetail() {
     caseStudy = tdLogisticsCaseStudy;
   } else if (id === 'trq-studio') {
     caseStudy = trqStudioCaseStudy;
+  } else if (id === 'mesaha-lakum') {
+    caseStudy = mesahaLakumCaseStudy;
   }
 
   if (!caseStudy) {
@@ -104,7 +107,7 @@ export function CaseStudyDetail() {
 
               <div className="flex gap-3">
                 <a
-                  href={id === 'trq-studio' ? 'https://trqstudio.com/' : 'https://tdlogistics.co/'}
+                  href={id === 'trq-studio' ? 'https://trqstudio.com/' : id === 'mesaha-lakum' ? 'https://lakumartspace.com/' : 'https://tdlogistics.co/'}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3 bg-[#e8ab61] hover:bg-[#d79e50] text-[#0f0f0f] rounded-lg transition-all font-medium inline-flex items-center gap-2"

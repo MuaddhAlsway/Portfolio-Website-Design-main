@@ -7,11 +7,8 @@ interface NavigationProps {
 
 const navLinks = [
   { name: 'Work Experience', id: 'experience' },
-  { name: 'Education', id: 'education' },
   { name: 'Portfolio', id: 'portfolio' },
   { name: 'Expertise', id: 'expertise' },
-  { name: 'Courses', id: 'courses' },
- 
 ];
 
 export function Navigation({}: NavigationProps) {

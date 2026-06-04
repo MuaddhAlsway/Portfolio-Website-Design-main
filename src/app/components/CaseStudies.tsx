@@ -35,6 +35,16 @@ const caseStudies: CaseStudyCard[] = [
     duration: '5 months',
     techStack: ['Next.js 14', 'TypeScript', 'SQLite', 'Tailwind CSS', 'JWT'],
   },
+  {
+    id: 'mesaha-lakum',
+    title: 'Mesaha Lakum',
+    subtitle: 'Cultural Artspace Platform with Admin Management',
+    description: 'Comprehensive full-stack application for LAKUM Artspace featuring a public website for events and exhibitions, powerful admin dashboard, bilingual support (English & Arabic), and secure authentication.',
+    image: '/Projects/LAKUM.png',
+    category: 'Full-Stack',
+    duration: '8 months',
+    techStack: ['PHP', 'MySQL', 'Vanilla JS', 'REST API', 'GitHub Actions'],
+  },
 ];
 
 export function CaseStudies() {
