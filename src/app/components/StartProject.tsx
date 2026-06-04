@@ -3,6 +3,13 @@ import { MessageCircle, ArrowRight, Check, Globe, Zap, Code, Smartphone, Lock, H
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 
+const projectNavLinks = [
+  { name: 'What We Build', id: 'what-we-build' },
+  { name: 'Why Choose Us', id: 'why-choose-us' },
+  { name: 'How It Works', id: 'how-it-works' },
+  { name: 'FAQ', id: 'faq' },
+];
+
 const projectTypes = [
   {
     title: 'Business Websites',
@@ -143,7 +150,14 @@ export function StartProject() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [heroVisible, setHeroVisible] = useState(true);
   const [showStickyCTA, setShowStickyCTA] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+    setMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -160,6 +174,75 @@ export function StartProject() {
 
   return (
     <div className="min-h-screen bg-[#0f0f0f] text-white overflow-x-hidden">
+      {/* Custom Navigation for Start Project Page */}
+      <nav className="fixed top-0 left-0 w-full z-40 bg-[#0f0f0f]/90 backdrop-blur-md border-b border-white/10">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo - Back to Home */}
+            <motion.button
+              onClick={() => navigate('/')}
+              className="rounded-full border-2 border-[#e8ab61] hover:border-[#d79e50] transition-all hover:scale-110"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <img
+                src="/me.jpeg"
+                alt="Muaddh Al-Sway"
+                className="w-12 h-12 rounded-full object-cover"
+              />
+            </motion.button>
+
+            {/* Desktop Navigation Links */}
+            <div className="hidden md:flex items-center gap-8">
+              {projectNavLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-white hover:text-[#e8ab61] transition-colors duration-300 font-medium"
+                >
+                  {link.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center gap-4">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="text-white p-2"
+              >
+                {mobileMenuOpen ? (
+                  <ArrowRight className="w-6 h-6 rotate-180" />
+                ) : (
+                  <ArrowRight className="w-6 h-6" />
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Navigation */}
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden mt-4 pb-4"
+            >
+              <div className="flex flex-col gap-4">
+                {projectNavLinks.map((link) => (
+                  <button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    className="text-white hover:text-[#e8ab61] transition-colors duration-300 text-left font-medium"
+                  >
+                    {link.name}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </div>
+      </nav>
       {/* Sticky WhatsApp Button - Only show between hero and final CTA */}
       {showStickyCTA && (
         <motion.button
@@ -217,7 +300,7 @@ export function StartProject() {
       </section>
 
       {/* Project Types Section */}
-      <section className="py-20 px-6 bg-[#1a1a1a]/50">
+      <section id="what-we-build" className="py-20 px-6 bg-[#1a1a1a]/50">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -260,7 +343,7 @@ export function StartProject() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 px-6">
+      <section id="why-choose-us" className="py-20 px-6">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -301,7 +384,7 @@ export function StartProject() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 px-6 bg-[#1a1a1a]/50">
+      <section id="how-it-works" className="py-20 px-6 bg-[#1a1a1a]/50">
         <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -344,7 +427,7 @@ export function StartProject() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 px-6">
+      <section id="faq" className="py-20 px-6">
         <div className="container mx-auto max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
