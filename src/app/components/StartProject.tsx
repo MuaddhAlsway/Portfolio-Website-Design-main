@@ -141,10 +141,13 @@ export function StartProject() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [heroVisible, setHeroVisible] = useState(true);
+  const [showStickyCTA, setShowStickyCTA] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if user has scrolled past hero section (approximately 600px)
+      // Show sticky button after scrolling past hero (300px) but before final CTA (approximately 1400px)
+      const showButton = window.scrollY > 300 && window.scrollY < 1400;
+      setShowStickyCTA(showButton);
       setIsScrolled(window.scrollY > 600);
       setHeroVisible(window.scrollY < 300);
     };
@@ -155,8 +158,8 @@ export function StartProject() {
 
   return (
     <div className="min-h-screen bg-[#0f0f0f] text-white overflow-x-hidden">
-      {/* Sticky WhatsApp Button - Only show when scrolled past hero */}
-      {isScrolled && !heroVisible && (
+      {/* Sticky WhatsApp Button - Only show between hero and final CTA */}
+      {showStickyCTA && (
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
