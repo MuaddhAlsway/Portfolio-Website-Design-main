@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router';
 import { Navigation } from '@/app/components/Navigation';
 import { Hero } from '@/app/components/Hero';
@@ -13,24 +12,9 @@ import { CaseStudies } from '@/app/components/CaseStudies';
 import { CaseStudyDetail } from '@/app/components/CaseStudyDetail';
 
 export default function App() {
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
-
-  useEffect(() => {
-    // Apply theme to document
-    if (theme === 'light') {
-      document.documentElement.classList.add('light-theme');
-    } else {
-      document.documentElement.classList.remove('light-theme');
-    }
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
   return (
-    <div className={`min-h-screen ${theme === 'dark' ? 'bg-[#0f0f0f]' : 'bg-white'}`}>
-      <Navigation theme={theme} toggleTheme={toggleTheme} />
+    <div className={`min-h-screen bg-[#0f0f0f]`}>
+      <Navigation />
       <Routes>
         <Route path="/" element={
           <>

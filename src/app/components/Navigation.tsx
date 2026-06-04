@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavigationProps {
-  theme: 'dark' | 'light';
-  toggleTheme: () => void;
 }
 
 const navLinks = [
@@ -16,7 +14,7 @@ const navLinks = [
  
 ];
 
-export function Navigation({ theme, toggleTheme }: NavigationProps) {
+export function Navigation({}: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,14 +54,18 @@ export function Navigation({ theme, toggleTheme }: NavigationProps) {
       >
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
+            {/* Profile Image Logo */}
             <motion.button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="text-2xl font-bold text-[#e8ab61] hover:text-[#d79e50] transition-colors"
-              whileHover={{ scale: 1.05 }}
+              className="rounded-full border-2 border-[#e8ab61] hover:border-[#d79e50] transition-all hover:scale-110"
+              whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              MU.STUDIO.LAB
+              <img
+                src="/me.jpeg"
+                alt="Muaddh Al-Sway"
+                className="w-12 h-12 rounded-full object-cover"
+              />
             </motion.button>
 
             {/* Desktop Navigation */}
@@ -77,32 +79,10 @@ export function Navigation({ theme, toggleTheme }: NavigationProps) {
                   {link.name}
                 </button>
               ))}
-              
-              {/* Theme Toggle */}
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              >
-                {theme === 'dark' ? (
-                  <Sun className="w-5 h-5 text-[#e8ab61]" />
-                ) : (
-                  <Moon className="w-5 h-5 text-[#e8ab61]" />
-                )}
-              </button>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center gap-4">
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-              >
-                {theme === 'dark' ? (
-                  <Sun className="w-5 h-5 text-[#e8ab61]" />
-                ) : (
-                  <Moon className="w-5 h-5 text-[#e8ab61]" />
-                )}
-              </button>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="text-white p-2"
