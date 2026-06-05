@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ChevronDown, Download } from 'lucide-react';
 import { useNavigate } from 'react-router';
+import { useI18n } from '@/app/i18n/useI18n';
 
 const titles = [
   'Front-End Developer',
@@ -16,9 +17,12 @@ export function Hero() {
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const navigate = useNavigate();
+  const { t, isRTL } = useI18n();
+  
+  const localTitles = t('hero.titles', '').split(',').filter(Boolean) || titles;
 
   useEffect(() => {
-    const currentTitle = titles[titleIndex];
+    const currentTitle = localTitles[titleIndex];
     const timeout = setTimeout(() => {
       if (!isDeleting) {
         if (displayText.length < currentTitle.length) {
@@ -31,13 +35,13 @@ export function Hero() {
           setDisplayText(displayText.substring(0, displayText.length - 1));
         } else {
           setIsDeleting(false);
-          setTitleIndex((titleIndex + 1) % titles.length);
+          setTitleIndex((titleIndex + 1) % localTitles.length);
         }
       }
     }, isDeleting ? 50 : 100);
 
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, titleIndex]);
+  }, [displayText, isDeleting, titleIndex, localTitles]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -103,13 +107,13 @@ export function Hero() {
               onClick={() => scrollToSection('portfolio')}
               className="px-8 py-3 bg-[#e8ab61] text-[#0f0f0f] rounded-full font-semibold hover:bg-[#d79e50] transition-all duration-300 hover:scale-105"
             >
-              View My Work
+              {t('hero.viewWork', 'View My Work')}
             </button>
             <button
               onClick={() => navigate('/start-project')}
               className="px-8 py-3 border-2 border-[#e8ab61] text-[#e8ab61] rounded-full font-semibold hover:bg-[#e8ab61] hover:text-[#0f0f0f] transition-all duration-300 hover:scale-105"
             >
-              Get In Touch
+              {t('hero.getInTouch', 'Get In Touch')}
             </button>
           
           </motion.div>
@@ -123,8 +127,8 @@ export function Hero() {
           >
             <div className="grid grid-cols-2 gap-6">
               {[
-                { number: '44+', label: 'Projects' },
-                { number: '8+', label: 'Tech Stacks' }
+                { number: '44+', label: t('hero.projects', 'Projects') },
+                { number: '8+', label: t('hero.techStacks', 'Tech Stacks') }
               ].map((stat, index) => (
                 <div key={index} className="backdrop-blur-md bg-white/5 rounded-xl p-4 border border-white/10 flex flex-col items-center justify-center text-center">
                   <div className="text-3xl font-bold text-[#e8ab61]">{stat.number}</div>

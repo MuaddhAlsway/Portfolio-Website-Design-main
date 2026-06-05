@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "workExperience": "Work Experience",
+    "portfolio": "Portfolio",
+    "expertise": "Expertise",
+    "startProject": "Start Project"
+  },
+  "hero": {
+    "titles": [
+      "Front-End Developer",
+      "Web Developer",
+      "Full Stack | React",
+      "UI/UX Enthusiast",
+      "Creative Coder"
+    ],
+    "viewWork": "View My Work",
+    "getInTouch": "Get In Touch",
+    "projects": "Projects",
+    "techStacks": "Tech Stacks"
+  },
+  "experience": {
+    "title": "Work",
+    "subtitle": "Experience",
+    "description": "My professional journey in web development and programming",
+    "achievements": "Key Achievements"
+  },
+  "portfolio": {
+    "title": "My",
+    "subtitle": "Portfolio",
+    "description": "Explore my latest projects and case studies"
+  },
+  "skills": {
+    "title": "Technical",
+    "subtitle": "Expertise",
+    "description": "Technologies and tools I work with"
+  },
+  "startProject": {
+    "title": "Start Your Project",
+    "subtitle": "With Confidence",
+    "description": "We help businesses, startups, and brands build modern digital experiences. Tell us about your project on WhatsApp and we'll guide you through the next steps.",
+    "chatWhatsApp": "Chat on WhatsApp",
+    "whatWeBuild": "What We Build",
+    "description2": "Diverse expertise across multiple platforms and technologies",
+    "whyChoose": "Why Clients Choose",
+    "MULAB": "MULAB",
+    "howItWorks": "How It",
+    "works": "Works",
+    "description3": "Our process is simple, transparent, and collaborative",
+    "faq": "Frequently Asked",
+    "questions": "Questions",
+    "haveProject": "Have a Project",
+    "inMind": "in Mind?",
+    "skipForms": "Skip the forms. Send us a message on WhatsApp and let's discuss your idea.",
+    "startConversation": "Start a WhatsApp Conversation",
+    "backHome": "Back to Home",
+    "projectTypes": {
+      "business": "Business Websites",
+      "businessDesc": "Professional sites that convert visitors into customers",
+      "webapp": "Web Applications",
+      "webappDesc": "Interactive platforms with real-time functionality",
+      "ecommerce": "E-Commerce",
+      "ecommerceDesc": "Online stores with payments and inventory management",
+      "logistics": "Logistics Platforms",
+      "logisticsDesc": "Tracking systems and supply chain solutions",
+      "dashboards": "Dashboards",
+      "dashboardsDesc": "Data visualization and admin management tools",
+      "portfolio": "Portfolio Websites",
+      "portfolioDesc": "Showcase your work and expertise online",
+      "landing": "Landing Pages",
+      "landingDesc": "High-converting pages optimized for campaigns",
+      "custom": "Custom Solutions",
+      "customDesc": "Tailored projects built to your specifications"
+    },
+    "whyChooseUs": {
+      "design": "Modern Design",
+      "designDesc": "Contemporary aesthetics with attention to detail",
+      "fast": "Fast Development",
+      "fastDesc": "Quick turnaround without compromising quality",
+      "seo": "SEO Optimized",
+      "seoDesc": "Built for search engines and visibility",
+      "mobile": "Mobile Responsive",
+      "mobileDesc": "Perfect experience on all devices",
+      "secure": "Secure Solutions",
+      "secureDesc": "Enterprise-grade security standards",
+      "support": "Ongoing Support",
+      "supportDesc": "Maintenance and updates after launch"
+    },
+    "process": {
+      "contact": "Contact Us",
+      "contactDesc": "Start a WhatsApp conversation with our team",
+      "discovery": "Discovery Call",
+      "discoveryDesc": "We discuss your goals and requirements",
+      "proposal": "Proposal",
+      "proposalDesc": "Receive a tailored project plan and estimate",
+      "design": "Design & Development",
+      "designDesc": "We build your solution with regular updates",
+      "launch": "Launch",
+      "launchDesc": "Your project goes live and we celebrate!"
+    }
+  },
+  "footer": {
+    "description": "Full Stack Web Developer specializing in React, Next.js, and modern web technologies. Passionate about creating beautiful, functional, and user-friendly web experiences.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "copyright": "© 2026 MULAB. Made with",
+    "by": "by MULAB"
+  }
+}

@@ -2,14 +2,15 @@ import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { useNavigate } from 'react-router';
+import { useI18n } from '@/app/i18n/useI18n';
 
 interface NavigationProps {
 }
 
 const navLinks = [
-  { name: 'Work Experience', id: 'experience' },
-  { name: 'Portfolio', id: 'portfolio' },
-  { name: 'Expertise', id: 'expertise' },
+  { name: 'Work Experience', id: 'experience', key: 'nav.workExperience' },
+  { name: 'Portfolio', id: 'portfolio', key: 'nav.portfolio' },
+  { name: 'Expertise', id: 'expertise', key: 'nav.expertise' },
 ];
 
 export function Navigation({}: NavigationProps) {
@@ -17,6 +18,7 @@ export function Navigation({}: NavigationProps) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
+  const { language, switchLanguage, t } = useI18n();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,16 +77,39 @@ export function Navigation({}: NavigationProps) {
                   onClick={() => scrollToSection(link.id)}
                   className="text-white hover:text-[#e8ab61] transition-colors duration-300 font-medium"
                 >
-                  {link.name}
+                  {t(link.key, link.name)}
                 </button>
               ))}
+              {/* Language Toggle */}
+              <div className="flex gap-2 border border-white/20 rounded-full p-1">
+                <button
+                  onClick={() => switchLanguage('en')}
+                  className={`px-3 py-1 rounded-full transition-all ${
+                    language === 'en'
+                      ? 'bg-[#e8ab61] text-[#0f0f0f]'
+                      : 'text-white hover:text-[#e8ab61]'
+                  }`}
+                >
+                  EN
+                </button>
+                <button
+                  onClick={() => switchLanguage('ar')}
+                  className={`px-3 py-1 rounded-full transition-all ${
+                    language === 'ar'
+                      ? 'bg-[#e8ab61] text-[#0f0f0f]'
+                      : 'text-white hover:text-[#e8ab61]'
+                  }`}
+                >
+                  AR
+                </button>
+              </div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => navigate('/start-project')}
                 className="px-6 py-2 bg-[#e8ab61] hover:bg-[#d79e50] text-[#0f0f0f] rounded-full font-semibold transition-all"
               >
-                Start Project
+                {t('nav.startProject', 'Start Project')}
               </motion.button>
             </div>
 
