@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { MessageCircle, ArrowRight, Check, Globe, Zap, Code, Smartphone, Lock, Headphones, Briefcase, TrendingUp, Search, Home, ArrowUp } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
+import { useI18n } from '@/app/i18n/useI18n';
 
 const projectNavLinks = [
   { name: 'What We Build', id: 'what-we-build' },
@@ -153,6 +154,7 @@ export function StartProject() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
   const navigate = useNavigate();
+  const { t, isRTL } = useI18n();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -305,11 +307,11 @@ export function StartProject() {
             className="text-center mb-12"
           >
             <h1 className="text-6xl md:text-7xl font-bold mb-6 leading-tight">
-              Start Your Project <br />
-              <span className="text-[#e8ab61]">With Confidence</span>
+              {t('startProject.title', 'Start Your Project')} <br />
+              <span className="text-[#e8ab61]">{t('startProject.subtitle', 'With Confidence')}</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-              We help businesses, startups, and brands build modern digital experiences. Tell us about your project on WhatsApp and we'll guide you through the next steps.
+              {t('startProject.description', 'We help businesses, startups, and brands build modern digital experiences. Tell us about your project on WhatsApp and we\'ll guide you through the next steps.')}
             </p>
 
             <motion.button
@@ -319,7 +321,7 @@ export function StartProject() {
               className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full text-lg font-semibold transition-all shadow-xl hover:shadow-2xl"
             >
               <MessageCircle className="w-6 h-6" />
-              Chat on WhatsApp
+              {t('startProject.chatWhatsApp', 'Chat on WhatsApp')}
             </motion.button>
           </motion.div>
         </div>
@@ -335,10 +337,10 @@ export function StartProject() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-4">
-              What We <span className="text-[#e8ab61]">Build</span>
+              {t('startProject.whatWeBuild', 'What We')} <span className="text-[#e8ab61]">{t('startProject.whatWeBuild', 'Build')}</span>
             </h2>
             <p className="text-xl text-gray-400">
-              Diverse expertise across multiple platforms and technologies
+              {t('startProject.description2', 'Diverse expertise across multiple platforms and technologies')}
             </p>
           </motion.div>
 
@@ -378,10 +380,10 @@ export function StartProject() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-4">
-              Why Clients Choose <span className="text-[#e8ab61]">MULAB</span>
+              {t('startProject.whyChoose', 'Why Clients Choose')} <span className="text-[#e8ab61]">{t('startProject.MULAB', 'MULAB')}</span>
             </h2>
             <p className="text-xl text-gray-400">
-              We deliver excellence in every project
+              {t('startProject.description', 'We deliver excellence in every project')}
             </p>
           </motion.div>
 
@@ -419,10 +421,10 @@ export function StartProject() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-4">
-              How It <span className="text-[#e8ab61]">Works</span>
+              {t('startProject.howItWorks', 'How It')} <span className="text-[#e8ab61]">{t('startProject.works', 'Works')}</span>
             </h2>
             <p className="text-xl text-gray-400">
-              Our process is simple, transparent, and collaborative
+              {t('startProject.description3', 'Our process is simple, transparent, and collaborative')}
             </p>
           </motion.div>
 
@@ -462,7 +464,7 @@ export function StartProject() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-4">
-              Frequently Asked <span className="text-[#e8ab61]">Questions</span>
+              {t('startProject.faq', 'Frequently Asked')} <span className="text-[#e8ab61]">{t('startProject.questions', 'Questions')}</span>
             </h2>
           </motion.div>
 
@@ -515,11 +517,11 @@ export function StartProject() {
             className="text-center"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              Have a Project <br />
-              <span className="text-[#e8ab61]">in Mind?</span>
+              {t('startProject.haveProject', 'Have a Project')} <br />
+              <span className="text-[#e8ab61]">{t('startProject.inMind', 'in Mind?')}</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto">
-              Skip the forms. Send us a message on WhatsApp and let's discuss your idea.
+              {t('startProject.skipForms', 'Skip the forms. Send us a message on WhatsApp and let\'s discuss your idea.')}
             </p>
 
             <motion.button
@@ -529,7 +531,7 @@ export function StartProject() {
               className="inline-flex items-center gap-3 px-10 py-5 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full text-xl font-semibold transition-all shadow-2xl hover:shadow-3xl"
             >
               <MessageCircle className="w-7 h-7" />
-              Start a WhatsApp Conversation
+              {t('startProject.startConversation', 'Start a WhatsApp Conversation')}
             </motion.button>
           </motion.div>
         </div>

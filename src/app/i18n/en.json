@@ -27,12 +27,40 @@
   "portfolio": {
     "title": "My",
     "subtitle": "Portfolio",
-    "description": "Explore my latest projects and case studies"
+    "description": "Explore my latest projects and case studies",
+    "viewProject": "View Project"
   },
   "skills": {
     "title": "Technical",
     "subtitle": "Expertise",
-    "description": "Technologies and tools I work with"
+    "description": "Technologies and tools I work with",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & Other"
+  },
+  "caseStudies": {
+    "title": "In-Depth Project",
+    "subtitle": "Breakdowns",
+    "description": "Detailed case studies showcasing strategic design, technical implementation, and real-world problem-solving",
+    "category": "Full-Stack",
+    "duration": "Duration",
+    "techStack": "Tech Stack",
+    "readFullCaseStudy": "Read Full Case Study"
+  },
+  "caseStudyDetail": {
+    "backToCaseStudies": "Back to All Case Studies",
+    "projectOverview": "Project Overview",
+    "theClient": "The Client",
+    "challenges": "The Challenges",
+    "projectGoals": "Project Goals",
+    "solution": "The Solution",
+    "keyFeatures": "Key Features",
+    "techStackLabel": "Tech Stack",
+    "keyLearnings": "Key Learnings",
+    "haveSimilar": "Have a",
+    "similarProject": "similar project?",
+    "letsBuild": "Let's work together to build a secure, scalable platform that transforms your business.",
+    "startYourProject": "Start Your Project"
   },
   "startProject": {
     "title": "Start Your Project",
@@ -43,8 +71,8 @@
     "description2": "Diverse expertise across multiple platforms and technologies",
     "whyChoose": "Why Clients Choose",
     "MULAB": "MULAB",
-    "howItWorks": "How It",
-    "works": "Works",
+    "howItWorks": "How",
+    "works": "It Works",
     "description3": "Our process is simple, transparent, and collaborative",
     "faq": "Frequently Asked",
     "questions": "Questions",
@@ -52,51 +80,7 @@
     "inMind": "in Mind?",
     "skipForms": "Skip the forms. Send us a message on WhatsApp and let's discuss your idea.",
     "startConversation": "Start a WhatsApp Conversation",
-    "backHome": "Back to Home",
-    "projectTypes": {
-      "business": "Business Websites",
-      "businessDesc": "Professional sites that convert visitors into customers",
-      "webapp": "Web Applications",
-      "webappDesc": "Interactive platforms with real-time functionality",
-      "ecommerce": "E-Commerce",
-      "ecommerceDesc": "Online stores with payments and inventory management",
-      "logistics": "Logistics Platforms",
-      "logisticsDesc": "Tracking systems and supply chain solutions",
-      "dashboards": "Dashboards",
-      "dashboardsDesc": "Data visualization and admin management tools",
-      "portfolio": "Portfolio Websites",
-      "portfolioDesc": "Showcase your work and expertise online",
-      "landing": "Landing Pages",
-      "landingDesc": "High-converting pages optimized for campaigns",
-      "custom": "Custom Solutions",
-      "customDesc": "Tailored projects built to your specifications"
-    },
-    "whyChooseUs": {
-      "design": "Modern Design",
-      "designDesc": "Contemporary aesthetics with attention to detail",
-      "fast": "Fast Development",
-      "fastDesc": "Quick turnaround without compromising quality",
-      "seo": "SEO Optimized",
-      "seoDesc": "Built for search engines and visibility",
-      "mobile": "Mobile Responsive",
-      "mobileDesc": "Perfect experience on all devices",
-      "secure": "Secure Solutions",
-      "secureDesc": "Enterprise-grade security standards",
-      "support": "Ongoing Support",
-      "supportDesc": "Maintenance and updates after launch"
-    },
-    "process": {
-      "contact": "Contact Us",
-      "contactDesc": "Start a WhatsApp conversation with our team",
-      "discovery": "Discovery Call",
-      "discoveryDesc": "We discuss your goals and requirements",
-      "proposal": "Proposal",
-      "proposalDesc": "Receive a tailored project plan and estimate",
-      "design": "Design & Development",
-      "designDesc": "We build your solution with regular updates",
-      "launch": "Launch",
-      "launchDesc": "Your project goes live and we celebrate!"
-    }
+    "backHome": "Back to Home"
   },
   "footer": {
     "description": "Full Stack Web Developer specializing in React, Next.js, and modern web technologies. Passionate about creating beautiful, functional, and user-friendly web experiences.",
