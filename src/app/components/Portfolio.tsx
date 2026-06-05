@@ -4,12 +4,10 @@ import { motion } from 'motion/react';
 import { ExternalLink, Github, FileText, BookOpen, GitBranch } from 'lucide-react';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { projects, categories } from '@/app/data/projects';
-import { useI18n } from '@/app/i18n/useI18n';
 
 export function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
   const navigate = useNavigate();
-  const { t } = useI18n();
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 
@@ -26,10 +24,10 @@ export function Portfolio() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            {t('portfolio.title', 'My')} <span className="text-[#e8ab61]">{t('portfolio.subtitle', 'Portfolio')}</span>
+            My <span className="text-[#e8ab61]">Portfolio</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            {t('portfolio.description', 'Explore my latest projects and case studies')}
+            Explore my latest projects and case studies
           </p>
         </motion.div>
 

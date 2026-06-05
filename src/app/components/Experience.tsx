@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { Briefcase, Code2 } from 'lucide-react';
-import { useI18n } from '@/app/i18n/useI18n';
 
 const experiences = [
   {
@@ -47,7 +46,6 @@ const experiences = [
 ];
 
 export function Experience() {
-  const { t } = useI18n();
 
   return (
     <section id="experience" className="py-20 bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a]">

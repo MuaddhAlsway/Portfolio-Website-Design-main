@@ -1,13 +1,10 @@
 import { motion } from 'motion/react';
 import { Heart, Linkedin, Github, ArrowUp } from 'lucide-react';
-import { useI18n } from '@/app/i18n/useI18n';
 
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  const { t, isRTL } = useI18n();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -28,7 +25,7 @@ export function Footer() {
               MULAB
             </motion.h3>
             <p className="text-gray-400 mb-4 max-w-md">
-              {t('footer.description', 'Full Stack Web Developer specializing in React, Next.js, and modern web technologies. Passionate about creating beautiful, functional, and user-friendly web experiences.')}
+              Full Stack Web Developer specializing in React, Next.js, and modern web technologies. Passionate about creating beautiful, functional, and user-friendly web experiences.
             </p>
             <div className="flex gap-4">
               <a
@@ -52,7 +49,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold mb-4">{t('footer.quickLinks', 'Quick Links')}</h4>
+            <h4 className="text-white font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               {[
                 { name: 'Work Experience', id: 'experience' },
@@ -74,7 +71,7 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-white font-bold mb-4">{t('footer.resources', 'Resources')}</h4>
+            <h4 className="text-white font-bold mb-4">Resources</h4>
             <ul className="space-y-2">
               {[
                 { name: 'Courses', id: 'courses' },
@@ -96,8 +93,8 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-gray-400 text-sm text-center md:text-left">
-            {t('footer.copyright', '© 2026 MULAB. Made with')} {' '}
-            <Heart className="w-4 h-4 inline text-red-500 fill-red-500" /> {t('footer.by', 'by MULAB')}
+            © 2026 MULAB. Made with {' '}
+            <Heart className="w-4 h-4 inline text-red-500 fill-red-500" /> {' '} by MULAB
           </div>
 
           <button
