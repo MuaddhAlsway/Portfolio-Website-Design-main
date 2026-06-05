@@ -25,22 +25,23 @@ const experiences = [
   {
     id: 2,
     title: 'Full Stack Developer',
-    company: 'MULAB',
-    period: '2023 - Present',
-    type: 'Self-Employed',
+    company: 'TRQ Studio',
+    period: 'Mar 2026 - Jun 1, 2026',
+    type: 'Part-Time',
     location: 'Remote',
-    description: 'Building modern, full-stack web applications for creative agencies, startups, and businesses. Specializing in bilingual platforms, real-time applications, and enterprise-grade solutions with secure authentication and scalable architecture.',
+    description: 'Building bilingual portfolio and content management platforms with enterprise-grade security and scalable architecture. Specializing in full-stack development with React, TypeScript, and Express.js for creative agencies and design studios. Future updates planned for platform enhancements.',
     achievements: [
-      'Developed TRQ Studio - Bilingual Portfolio & Content Management Platform with admin dashboard',
-      'Built TD Logistics - Secure Digital Logistics Platform with real-time tracking',
-      'Created Mesaha Lakum - Cultural Artspace Platform with event management',
-      'Implemented multilingual support (Arabic/English) with RTL layouts',
-      'Designed scalable database architectures with proper authentication',
-      'Delivered full-stack solutions with React, TypeScript, and Node.js',
-      'Maintained high code quality and performance standards',
-      'Provided ongoing support and maintenance for deployed projects'
+      'Developed TRQ Studio - Bilingual Portfolio & Content Management Platform',
+      'Implemented comprehensive admin dashboard for content management',
+      'Built secure authentication system with JWT and bcryptjs password hashing',
+      'Created bilingual interface supporting English and Arabic with RTL layout support',
+      'Designed rich text editor and file upload management system',
+      'Implemented email integration for contact forms and notifications',
+      'Built RESTful API endpoints for public site and admin operations',
+      'Optimized performance with Vite and modern development practices',
+      'Future: Planning platform enhancements and additional features'
     ],
-    tech: ['React', 'TypeScript', 'Vite', 'Express.js', 'SQLite', 'Turso', 'JWT', 'Tailwind CSS', 'Next.js', 'PHP']
+    tech: ['React', 'TypeScript', 'Vite', 'Express.js', 'SQLite', 'Turso', 'JWT', 'bcryptjs', 'Tailwind CSS', 'RTL Support']
   }
 ];
 
