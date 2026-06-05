@@ -58,10 +58,10 @@ export function Experience() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            {t('experience.title', 'Work')} <span className="text-[#e8ab61]">{t('experience.subtitle', 'Experience')}</span>
+            Work <span className="text-[#e8ab61]">Experience</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            {t('experience.description', 'My professional journey in web development and programming')}
+            My professional journey in web development and programming
           </p>
         </motion.div>
 
@@ -107,7 +107,7 @@ export function Experience() {
                     <p className="text-gray-300 mb-4">{exp.description}</p>
 
                     <div className="mb-4">
-                      <div className="text-white font-semibold mb-2">{t('experience.achievements', 'Key Achievements')}:</div>
+                      <div className="text-white font-semibold mb-2">Key Achievements:</div>
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement, i) => (
                           <li key={i} className="flex items-start gap-2 text-gray-400 text-sm">
