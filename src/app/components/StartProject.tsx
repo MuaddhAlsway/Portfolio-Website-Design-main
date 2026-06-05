@@ -138,7 +138,7 @@ const faqItems = [
 ];
 
 const whatsappNumber = '+966560394576';
-const whatsappMessage = 'Hi MU.STUDIO.LAB, I\'d like to discuss a new project.';
+const whatsappMessage = 'Hi MULAB, I\'d like to discuss a new project.';
 
 const openWhatsApp = () => {
   const encodedMessage = encodeURIComponent(whatsappMessage);
@@ -378,7 +378,7 @@ export function StartProject() {
             className="text-center mb-16"
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-4">
-              Why Clients Choose <span className="text-[#e8ab61]">MU.STUDIO.LAB</span>
+              Why Clients Choose <span className="text-[#e8ab61]">MULAB</span>
             </h2>
             <p className="text-xl text-gray-400">
               We deliver excellence in every project

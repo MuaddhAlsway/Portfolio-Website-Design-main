@@ -25,32 +25,22 @@ const experiences = [
   {
     id: 2,
     title: 'Full Stack Developer',
-    company: 'MUSTUDIOLAB',
+    company: 'MULAB',
     period: '2023 - Present',
     type: 'Self-Employed',
-    description: 'Building modern web applications using React, Next.js, and various backend technologies. Specializing in creating responsive, user-friendly interfaces and robust backend systems.',
+    location: 'Remote',
+    description: 'Building modern, full-stack web applications for creative agencies, startups, and businesses. Specializing in bilingual platforms, real-time applications, and enterprise-grade solutions with secure authentication and scalable architecture.',
     achievements: [
-      'Developed 36+ web applications and projects',
-      'Mastered React 18/19 and modern frontend frameworks',
-      'Implemented authentication systems and database integrations',
-      'Created responsive designs for optimal user experience'
+      'Developed TRQ Studio - Bilingual Portfolio & Content Management Platform with admin dashboard',
+      'Built TD Logistics - Secure Digital Logistics Platform with real-time tracking',
+      'Created Mesaha Lakum - Cultural Artspace Platform with event management',
+      'Implemented multilingual support (Arabic/English) with RTL layouts',
+      'Designed scalable database architectures with proper authentication',
+      'Delivered full-stack solutions with React, TypeScript, and Node.js',
+      'Maintained high code quality and performance standards',
+      'Provided ongoing support and maintenance for deployed projects'
     ],
-    tech: ['React', 'Next.js', 'Tailwind CSS', 'Node.js', 'Firebase']
-  },
-  {
-    id: 3,
-    title: 'Frontend Developer',
-    company: 'MUSTUDIOLAB',
-    period: '2023 - Present',
-    type: 'Freelance',
-    description: 'Specializing in creating pixel-perfect, responsive websites using HTML, CSS, and JavaScript. Focus on clean code and modern design principles.',
-    achievements: [
-      'Built 20+ HTML/CSS/JavaScript projects',
-      'Created clone websites of major platforms (Netflix, Spotify, Amazon)',
-      'Implemented mobile-first responsive design strategies',
-      'Delivered projects for local clients'
-    ],
-    tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design']
+    tech: ['React', 'TypeScript', 'Vite', 'Express.js', 'SQLite', 'Turso', 'JWT', 'Tailwind CSS', 'Next.js', 'PHP']
   }
 ];
 

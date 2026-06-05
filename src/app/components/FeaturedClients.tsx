@@ -23,7 +23,7 @@ const clientProjects: ClientProject[] = [
     image: '/Projects/TRQ.png',
     github: 'https://github.com/MuaddhAlsway/TRQ-Archicator-Studio.git',
     live: 'https://trqstudio.com/',
-    brand: 'MUSTUDIOLAB'
+    brand: 'MULAB'
   },
   {
     id: 2,
@@ -53,7 +53,7 @@ const clientProjects: ClientProject[] = [
     image: '/Projects/ALRYADH.png',
     github: 'https://github.com/MuaddhAlsway/Alryadah.git',
     live: 'https://bc0161e1.riyadah-certified-accountants-saudi-arabia.pages.dev/',
-    brand: 'MUSTUDIOLAB'
+    brand: 'MULAB'
   },
   {
     id: 5,

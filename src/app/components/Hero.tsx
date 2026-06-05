@@ -74,7 +74,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight"
           >
-            MU.STUDIO.LAB
+            MU.LAB
           </motion.h1>
 
           {/* Typing Animation */}

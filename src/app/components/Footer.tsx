@@ -22,7 +22,7 @@ export function Footer() {
               className="text-2xl font-bold text-[#e8ab61] mb-4 cursor-pointer"
               onClick={scrollToTop}
             >
-              MUSTUDIOLAB
+              MULAB
             </motion.h3>
             <p className="text-gray-400 mb-4 max-w-md">
               Full Stack Web Developer specializing in React, Next.js, and modern web technologies.
@@ -94,8 +94,8 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-gray-400 text-sm text-center md:text-left">
-            © 2026 MUSTUDIOLAB. Made with{' '}
-            <Heart className="w-4 h-4 inline text-red-500 fill-red-500" /> by MUSTUDIOLAB
+            © 2026 MULAB. Made with{' '}
+            <Heart className="w-4 h-4 inline text-red-500 fill-red-500" /> by MULAB
           </div>
 
           <button
