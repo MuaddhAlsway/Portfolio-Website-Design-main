@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ChevronDown, Download } from 'lucide-react';
+import { useNavigate } from 'react-router';
 
 const titles = [
   'Front-End Developer',
@@ -14,6 +15,7 @@ export function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const currentTitle = titles[titleIndex];
@@ -104,7 +106,7 @@ export function Hero() {
               View My Work
             </button>
             <button
-              onClick={() => scrollToSection('contact')}
+              onClick={() => navigate('/start-project')}
               className="px-8 py-3 border-2 border-[#e8ab61] text-[#e8ab61] rounded-full font-semibold hover:bg-[#e8ab61] hover:text-[#0f0f0f] transition-all duration-300 hover:scale-105"
             >
               Get In Touch
